@@ -16,11 +16,12 @@ public class Main {
 
     public static void main(String[] args) {
         ArrayList<MedicineComponent> medList = new ArrayList<>();
+         ArrayList<Medicine> medList2 = new ArrayList<>();
 
-        MedicineComponent asitromin = new Asitromin("Asitromin", 50, 100);
-        MedicineComponent penicilin = new Penicilin("Penicilin", 30, 50);
-        MedicineComponent vetbicit = new Vetbicit("Vetbicit", 40, 150);
-        MedicineComponent water = new Water("Water", 15, 0);
+        Asitromin asitromin = new Asitromin("Asitromin", 50, 100);
+        Penicilin penicilin = new Penicilin("Penicilin", 30, 50);
+        Vetbicit vetbicit = new Vetbicit("Vetbicit", 40, 150);
+        Water water = new Water("Water", 15, 0);
 
         medList.add(vetbicit);
         medList.add(asitromin);
