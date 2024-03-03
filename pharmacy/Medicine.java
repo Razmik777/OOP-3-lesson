@@ -8,10 +8,21 @@ public class Medicine implements Iterator<MedicineComponent>,Comparable<Medicine
 
     public List<MedicineComponent> components;
     private int index;
+    private  String name;
+
+    public void setName(String name) {
+        this.name = name;
+    }
 
     public Medicine() {
         this.components = new ArrayList<>();
         this.index = 0;
+        this.name = name;
+    }
+
+
+    public String getName() {
+       return name;
     }
 
     public Medicine addComponent(MedicineComponent component) {
@@ -21,7 +32,7 @@ public class Medicine implements Iterator<MedicineComponent>,Comparable<Medicine
 
     @Override
     public int compareTo(Medicine obj) {
-        return components.size() - obj.components.size();
+        return name.length() - obj.getName().length();
     }
 
     @Override
