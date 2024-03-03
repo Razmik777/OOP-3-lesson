@@ -22,6 +22,11 @@ public class Main {
         MedicineComponent vetbicit = new Vetbicit("Vetbicit", 40, 150);
         MedicineComponent water = new Water("Water", 15, 0);
 
+        medList.add(vetbicit);
+        medList.add(asitromin);
+        medList.add(penicilin);
+        medList.add(water);
+
         Medicine medicine = new Medicine();
         medicine.addComponent(asitromin).addComponent(penicilin).addComponent(vetbicit).addComponent(water);
 
@@ -31,7 +36,6 @@ public class Main {
         Medicine2 medicine1 = new Medicine2();
         medicine1.addComponent(asitromin).addComponent(penicilin).addComponent(vetbicit);
 
-        
         Collections.sort(medList, Comparator.comparingInt(value -> value.getPower()));
 
         System.out.println("\nПосле сортировки:");
@@ -52,10 +56,6 @@ public class Main {
         // System.out.println(component);
         // }
 
-        medList.add(vetbicit);
-        medList.add(asitromin);
-        medList.add(penicilin);
-        medList.add(water);
 
         // System.out.println(medList);
 
