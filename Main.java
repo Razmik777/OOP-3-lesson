@@ -16,7 +16,7 @@ public class Main {
 
     public static void main(String[] args) {
         ArrayList<MedicineComponent> medList = new ArrayList<>();
-         ArrayList<Medicine> medList2 = new ArrayList<>();
+        ArrayList<Medicine> medList2 = new ArrayList<>();
 
         Asitromin asitromin = new Asitromin("Asitromin", 50, 100);
         Penicilin penicilin = new Penicilin("Penicilin", 30, 50);
@@ -31,17 +31,23 @@ public class Main {
         Medicine medicine = new Medicine();
         medicine.addComponent(asitromin).addComponent(penicilin).addComponent(vetbicit).addComponent(water);
 
-        Collections.sort(medicine.components, Comparator.comparingInt(value -> value.getPower()));
+        Collections.sort(medicine.components, Comparator.comparingInt(value ->
+        value.getPower()));
         System.out.println(medicine);
-        
-        Medicine2 medicine1 = new Medicine2();
+
+        Medicine medicine1 = new Medicine();
         medicine1.addComponent(asitromin).addComponent(penicilin).addComponent(vetbicit);
 
-        Collections.sort(medList, Comparator.comparingInt(value -> value.getPower()));
+        medList2.add(medicine);
+        medList2.add(medicine1);
+        System.out.println(medList2);
+        
+
+        Collections.sort(medList, Comparator.comparing(value -> value.getPower()));
 
         System.out.println("\nПосле сортировки:");
-        for (MedicineComponent list : medList) {
-            System.out.println(list);
+        for (MedicineComponent component : medList) {
+            System.out.println(component);
         }
 
         // for (MedicineComponent component : medicine1) {
@@ -57,10 +63,10 @@ public class Main {
         // System.out.println(component);
         // }
 
+        // // System.out.println(medList);
 
-        // System.out.println(medList);
-
-        Collections.sort(medList, (comp1, comp2) -> (int) (comp1.getWeight() - comp2.getWeight()));
+        Collections.sort(medList, (comp1, comp2) -> (int) (comp1.getWeight() -
+        comp2.getWeight()));
         Collections.sort(medList, Comparator.reverseOrder());
 
         System.out.println(medList);
