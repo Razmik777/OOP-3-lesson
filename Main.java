@@ -31,6 +31,14 @@ public class Main {
         Medicine2 medicine1 = new Medicine2();
         medicine1.addComponent(asitromin).addComponent(penicilin).addComponent(vetbicit);
 
+        
+        Collections.sort(medList, Comparator.comparingInt(value -> value.getPower()));
+
+        System.out.println("\nПосле сортировки:");
+        for (MedicineComponent list : medList) {
+            System.out.println(list);
+        }
+
         // for (MedicineComponent component : medicine1) {
         // System.out.println(component);
         // }
