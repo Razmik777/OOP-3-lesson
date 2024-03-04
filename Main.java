@@ -50,6 +50,9 @@ public class Main {
             System.out.println(component);
         }
 
+        Collections.sort(medList2, Comparator.comparingInt(value -> value.getTotalComponents()));
+        System.out.println(medList2);
+
         // for (MedicineComponent component : medicine1) {
         // System.out.println(component);
         // }
