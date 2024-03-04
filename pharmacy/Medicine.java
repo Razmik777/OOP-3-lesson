@@ -30,6 +30,10 @@ public class Medicine implements Iterator<MedicineComponent>,Comparable<Medicine
         return this;
     }
 
+    public int getTotalComponents(){
+        return components.size();
+    }
+
     @Override
     public int compareTo(Medicine obj) {
         return name.length() - obj.getName().length();
